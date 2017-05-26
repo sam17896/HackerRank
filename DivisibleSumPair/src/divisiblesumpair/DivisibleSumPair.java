@@ -1,0 +1,42 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package divisiblesumpair;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author AHSAN
+ */
+public class DivisibleSumPair {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int k = in.nextInt();
+        int[] a = new int[n];
+        for(int a_i=0; a_i < n; a_i++){
+            a[a_i] = in.nextInt();
+        }
+        
+        int count =0;
+        for(int i=0;i<n;i++){
+            for(int j=i+1;j<n;j++){
+                if((a[i]+a[j])%k==0){
+                    count++;
+                }
+            }
+        }
+        
+        System.out.println(count);
+        
+    }
+    
+}
