@@ -38,18 +38,15 @@ public class PickingNumbers {
         int max_count = 1;
         for(int i=1;i<n;i++){
             if(a[i] - min < 2){
-                System.out.println(a[i] - min);
                 count++;
             } else {
                 j++;
                 min = a[j];
                 i = j;
-                //System.out.println(count);
                 if(count > max_count){
                     max_count = count;
-                  //  System.out.println(max_count);
                 }
-                count = 0;
+                count = 1;
             }
         }
         
